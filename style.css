@@ -1,0 +1,52 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.welcome-animation {
+  background-color: #1A1F71;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.animation-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.icon {
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: iconFade 0.8s ease forwards;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.icon.nfc { animation-delay: 0.2s; }
+.icon.blockchain { animation-delay: 0.4s; }
+.icon.mobile { animation-delay: 0.6s; }
+.icon.security { animation-delay: 0.8s; }
+
+@keyframes iconFade {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: textFade 1s ease forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 1.5s;
+}
+
+@keyframes textFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
